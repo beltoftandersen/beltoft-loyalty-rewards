@@ -1,0 +1,587 @@
+# Portuguese (Portugal) translation for Beltoft Loyalty Rewards for WooCommerce.
+# Copyright (C) 2026 Chimkins IT
+# This file is distributed under the same license as the plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Beltoft Loyalty Rewards for WooCommerce 1.2.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-17 00:00+0000\n"
+"PO-Revision-Date: 2026-02-17 00:00+0000\n"
+"Last-Translator: Chimkins IT\n"
+"Language-Team: Portuguese (Portugal)\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name — keep "for WooCommerce" untranslated per trademark rules
+msgid "Beltoft Loyalty Rewards for WooCommerce"
+msgstr "Beltoft Loyalty Rewards for WooCommerce"
+
+# ==========================================================================
+# Main plugin file
+# ==========================================================================
+
+#: beltoft-loyalty-rewards.php
+msgid "Beltoft Loyalty Rewards for WooCommerce requires WooCommerce to be installed and active."
+msgstr "Loyalty Rewards for WooCommerce requer que o WooCommerce esteja instalado e ativo."
+
+#: beltoft-loyalty-rewards.php
+msgid "Settings"
+msgstr "Definições"
+
+# ==========================================================================
+# Plugin.php — product page earn message
+# ==========================================================================
+
+#: src/Plugin.php
+#, php-format
+msgid "Purchase this product and earn %s points!"
+msgstr "Compre este produto e ganhe %s pontos!"
+
+# ==========================================================================
+# Admin/SettingsPage.php — tabs, sections, fields
+# ==========================================================================
+
+#: src/Admin/SettingsPage.php
+msgid "Loyalty Rewards"
+msgstr "Loyalty Rewards"
+
+#: src/Admin/SettingsPage.php
+msgid "General"
+msgstr "Geral"
+
+#: src/Admin/SettingsPage.php
+msgid "Enable Loyalty Points"
+msgstr "Ativar Pontos de Fidelidade"
+
+#: src/Admin/SettingsPage.php
+msgid "Earning Rules"
+msgstr "Regras de Ganho"
+
+#: src/Admin/SettingsPage.php
+msgid "Configure how customers earn points on purchases."
+msgstr "Configure como os clientes ganham pontos nas compras."
+
+#: src/Admin/SettingsPage.php
+#, php-format
+msgid "Earn Rate (points per %s1)"
+msgstr "Taxa de Ganho (pontos por %s1)"
+
+#: src/Admin/SettingsPage.php
+msgid "Award Points On"
+msgstr "Atribuir Pontos Em"
+
+#: src/Admin/SettingsPage.php
+msgid "Order Completed"
+msgstr "Encomenda Concluída"
+
+#: src/Admin/SettingsPage.php
+msgid "Order Processing"
+msgstr "Encomenda em Processamento"
+
+#: src/Admin/SettingsPage.php
+msgid "Exclude Tax from Points Calculation"
+msgstr "Excluir Impostos do Cálculo de Pontos"
+
+#: src/Admin/SettingsPage.php
+msgid "Exclude Shipping from Points Calculation"
+msgstr "Excluir Envio do Cálculo de Pontos"
+
+#: src/Admin/SettingsPage.php
+msgid "Rounding"
+msgstr "Arredondamento"
+
+#: src/Admin/SettingsPage.php
+msgid "Round Down"
+msgstr "Arredondar para Baixo"
+
+#: src/Admin/SettingsPage.php
+msgid "Round Nearest"
+msgstr "Arredondar ao Mais Próximo"
+
+#: src/Admin/SettingsPage.php
+msgid "Round Up"
+msgstr "Arredondar para Cima"
+
+#: src/Admin/SettingsPage.php
+msgid "Redemption Rules"
+msgstr "Regras de Troca"
+
+#: src/Admin/SettingsPage.php
+msgid "Configure how customers redeem points for discounts."
+msgstr "Configure como os clientes trocam pontos por descontos."
+
+#: src/Admin/SettingsPage.php
+msgid "Enable Redemption"
+msgstr "Ativar Troca"
+
+#: src/Admin/SettingsPage.php
+msgid "Points Required"
+msgstr "Pontos Necessários"
+
+#: src/Admin/SettingsPage.php
+msgid "This many points equals the currency amount below."
+msgstr "Esta quantidade de pontos equivale ao valor monetário abaixo."
+
+#: src/Admin/SettingsPage.php
+#, php-format
+msgid "Currency Value (%s)"
+msgstr "Valor Monetário (%s)"
+
+#: src/Admin/SettingsPage.php
+msgid "The discount value for the points above."
+msgstr "O valor do desconto para os pontos acima."
+
+#: src/Admin/SettingsPage.php
+msgid "Minimum Points to Redeem"
+msgstr "Mínimo de Pontos para Trocar"
+
+#: src/Admin/SettingsPage.php
+msgid "Max Cart Discount (%)"
+msgstr "Desconto Máximo no Carrinho (%)"
+
+#: src/Admin/SettingsPage.php
+msgid "Max % of cart payable with points. Set 100 to allow full payment."
+msgstr "Máximo % do carrinho pagável com pontos. Defina 100 para permitir pagamento total."
+
+#: src/Admin/SettingsPage.php
+msgid "Display"
+msgstr "Apresentação"
+
+#: src/Admin/SettingsPage.php
+msgid "Show \"My Points\" Tab in My Account"
+msgstr "Mostrar separador \"Os Meus Pontos\" em A Minha Conta"
+
+#: src/Admin/SettingsPage.php
+msgid "To display the points message in a custom location, use the shortcode:"
+msgstr "Para mostrar a mensagem de pontos numa localização personalizada, use o shortcode:"
+
+#: src/Admin/SettingsPage.php
+msgid "Show \"Earn X Points\" on Product Pages"
+msgstr "Mostrar \"Ganhe X Pontos\" nas Páginas de Produto"
+
+#: src/Admin/SettingsPage.php
+msgid "To display the redeem form in a custom location, use the shortcode:"
+msgstr "Para mostrar o formulário de troca numa localização personalizada, use o shortcode:"
+
+#: src/Admin/SettingsPage.php
+msgid "Uncheck the options above to avoid compatibility issues."
+msgstr "Desmarque as opções acima para evitar problemas de compatibilidade."
+
+#: src/Admin/SettingsPage.php
+msgid "Show Redeem Form on Cart Page"
+msgstr "Mostrar Formulário de Troca na Página do Carrinho"
+
+#: src/Admin/SettingsPage.php
+msgid "Show Redeem Form on Checkout Page"
+msgstr "Mostrar Formulário de Troca na Página de Checkout"
+
+#: src/Admin/SettingsPage.php
+msgid "Sign Up Page URL"
+msgstr "URL da Página de Registo"
+
+#: src/Admin/SettingsPage.php
+msgid "URL for the guest sign-up link shown on cart and checkout."
+msgstr "URL para o link de registo de visitantes mostrado no carrinho e checkout."
+
+#: src/WooCommerce/RedeemHooks.php
+#, php-format
+msgid "Log in or %1$screate an account%2$s to earn <strong>%3$s points</strong> (worth %4$s) on this order!"
+msgstr "Inicie sessão ou %1$scrie uma conta%2$s para ganhar <strong>%3$s pontos</strong> (no valor de %4$s) nesta encomenda!"
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Monetary value of points to earn."
+msgstr "Valor monetário dos pontos a ganhar."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Sign-up page URL for guests."
+msgstr "URL da página de registo para visitantes."
+
+#: src/Admin/SettingsPage.php
+msgid "Expiry"
+msgstr "Expiração"
+
+#: src/Admin/SettingsPage.php
+msgid "Enable Points Expiry"
+msgstr "Ativar Expiração de Pontos"
+
+#: src/Admin/SettingsPage.php
+msgid "Expire After (days)"
+msgstr "Expirar Após (dias)"
+
+#: src/Admin/SettingsPage.php
+msgid "Advanced"
+msgstr "Avançado"
+
+#: src/Admin/SettingsPage.php
+msgid "Delete All Data on Uninstall"
+msgstr "Eliminar Todos os Dados ao Desinstalar"
+
+#: src/Admin/SettingsPage.php
+msgid "Enable Debug Logging"
+msgstr "Ativar Registo de Depuração"
+
+#: src/Admin/SettingsPage.php
+msgid "Log loyalty events to WooCommerce > Status > Logs. Disable in production for best performance."
+msgstr "Registar eventos de fidelidade em WooCommerce > Estado > Registos. Desative em produção para melhor desempenho."
+
+#: src/Admin/SettingsPage.php
+msgid "Points Ledger"
+msgstr "Registo de Pontos"
+
+#: src/Admin/SettingsPage.php
+msgid "Export CSV"
+msgstr "Exportar CSV"
+
+#: src/Admin/SettingsPage.php
+msgid "In Circulation"
+msgstr "Em Circulação"
+
+#: src/Admin/SettingsPage.php
+msgid "Earned This Month"
+msgstr "Ganhos Este Mês"
+
+#: src/Admin/SettingsPage.php
+msgid "Redeemed This Month"
+msgstr "Trocados Este Mês"
+
+#: src/Admin/SettingsPage.php
+msgid "Expired This Month"
+msgstr "Expirados Este Mês"
+
+#: src/Admin/SettingsPage.php
+msgid "Search User ID"
+msgstr "Pesquisar ID de Utilizador"
+
+# ==========================================================================
+# Admin/LedgerTable.php
+# ==========================================================================
+
+#: src/Admin/LedgerTable.php
+msgid "User"
+msgstr "Utilizador"
+
+#: src/Admin/LedgerTable.php
+msgid "Order"
+msgstr "Encomenda"
+
+#: src/Admin/LedgerTable.php
+msgid "Points"
+msgstr "Pontos"
+
+#: src/Admin/LedgerTable.php
+msgid "Balance After"
+msgstr "Saldo Após"
+
+#: src/Admin/LedgerTable.php
+msgid "Type"
+msgstr "Tipo"
+
+#: src/Admin/LedgerTable.php
+msgid "Description"
+msgstr "Descrição"
+
+#: src/Admin/LedgerTable.php
+msgid "Date"
+msgstr "Data"
+
+#: src/Admin/LedgerTable.php
+msgid "Earned"
+msgstr "Ganhos"
+
+#: src/Admin/LedgerTable.php
+msgid "Redeemed"
+msgstr "Trocados"
+
+#: src/Admin/LedgerTable.php
+msgid "Admin Add"
+msgstr "Adição pelo Admin"
+
+#: src/Admin/LedgerTable.php
+msgid "Admin Deduct"
+msgstr "Dedução pelo Admin"
+
+#: src/Admin/LedgerTable.php
+msgid "Refund/Cancel"
+msgstr "Reembolso/Cancelamento"
+
+#: src/Admin/LedgerTable.php
+msgid "Expired"
+msgstr "Expirados"
+
+#: src/Admin/LedgerTable.php
+msgid "All Types"
+msgstr "Todos os Tipos"
+
+#: src/Admin/LedgerTable.php
+msgid "Filter"
+msgstr "Filtrar"
+
+#: src/Admin/LedgerTable.php
+msgid "No ledger entries found."
+msgstr "Nenhum registo encontrado."
+
+# ==========================================================================
+# Admin/LedgerListTable.php
+# ==========================================================================
+
+#: src/Admin/LedgerListTable.php
+msgid "Unauthorized."
+msgstr "Não autorizado."
+
+# ==========================================================================
+# Admin/UserProfile.php
+# ==========================================================================
+
+#: src/Admin/UserProfile.php
+msgid "Loyalty Points"
+msgstr "Pontos de Fidelidade"
+
+#: src/Admin/UserProfile.php
+msgid "Current Balance"
+msgstr "Saldo Atual"
+
+#: src/Admin/UserProfile.php
+msgid "View Ledger"
+msgstr "Ver Registo"
+
+#: src/Admin/UserProfile.php
+msgid "Lifetime Earned"
+msgstr "Total Ganho"
+
+#: src/Admin/UserProfile.php
+msgid "Lifetime Spent"
+msgstr "Total Gasto"
+
+#: src/Admin/UserProfile.php
+msgid "Adjust Points"
+msgstr "Ajustar Pontos"
+
+#: src/Admin/UserProfile.php
+msgid "Positive to add, negative to deduct."
+msgstr "Positivo para adicionar, negativo para deduzir."
+
+#: src/Admin/UserProfile.php
+msgid "Reason"
+msgstr "Motivo"
+
+# ==========================================================================
+# WooCommerce/MyAccount.php
+# ==========================================================================
+
+#: src/WooCommerce/MyAccount.php
+msgid "My Points"
+msgstr "Os Meus Pontos"
+
+#: src/WooCommerce/MyAccount.php
+msgid "Transaction History"
+msgstr "Histórico de Transações"
+
+#: src/WooCommerce/MyAccount.php
+msgid "Balance"
+msgstr "Saldo"
+
+#: src/WooCommerce/MyAccount.php
+msgid "No transactions yet. Start shopping to earn points!"
+msgstr "Ainda sem transações. Comece a comprar para ganhar pontos!"
+
+#: src/WooCommerce/MyAccount.php
+#, php-format
+msgid "You earn %1$s point(s) for every %2$s spent."
+msgstr "Ganha %1$s ponto(s) por cada %2$s gasto."
+
+#: src/WooCommerce/MyAccount.php
+#, php-format
+msgid "Redeem %1$s points for %2$s off at checkout."
+msgstr "Troque %1$s pontos por %2$s de desconto no checkout."
+
+# ==========================================================================
+# WooCommerce/RedeemHooks.php
+# ==========================================================================
+
+#: src/WooCommerce/RedeemHooks.php
+#, php-format
+msgid "Points Redemption (%s pts)"
+msgstr "Troca de Pontos (%s pts)"
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "pts"
+msgstr "pts"
+
+#: src/WooCommerce/RedeemHooks.php
+#, php-format
+msgid "Place this order and earn <strong>%s</strong> points"
+msgstr "Faça esta encomenda e ganhe <strong>%s</strong> pontos"
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "Points discount applied"
+msgstr "Desconto com pontos aplicado"
+
+#: src/WooCommerce/RedeemHooks.php
+#, php-format
+msgid "%1$s pts = %2$s off"
+msgstr "%1$s pts = %2$s de desconto"
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "Remove"
+msgstr "Remover"
+
+#: src/WooCommerce/RedeemHooks.php
+#, php-format
+msgid "Redeem your points for up to <strong>%1$s</strong> off this order (%2$s points)"
+msgstr "Troque os seus pontos por até <strong>%1$s</strong> de desconto nesta encomenda (%2$s pontos)"
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "Points to redeem"
+msgstr "Pontos a trocar"
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "Apply"
+msgstr "Aplicar"
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "You must be logged in."
+msgstr "Tem de ter sessão iniciada."
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "Invalid points amount."
+msgstr "Quantidade de pontos inválida."
+
+#: src/WooCommerce/RedeemHooks.php
+#, php-format
+msgid "Minimum %s points required to redeem."
+msgstr "São necessários no mínimo %s pontos para trocar."
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "Points applied!"
+msgstr "Pontos aplicados!"
+
+#: src/WooCommerce/RedeemHooks.php
+msgid "Points discount removed."
+msgstr "Desconto com pontos removido."
+
+#: src/WooCommerce/RedeemHooks.php
+#, php-format
+msgid "Points redeemed for order #%s"
+msgstr "Pontos trocados na encomenda #%s"
+
+# ==========================================================================
+# WooCommerce/EarnHooks.php
+# ==========================================================================
+
+#: src/WooCommerce/EarnHooks.php
+#, php-format
+msgid "Points earned for order #%s"
+msgstr "Pontos ganhos na encomenda #%s"
+
+#: src/WooCommerce/EarnHooks.php
+#, php-format
+msgid "Points reversed for cancelled/refunded order #%s"
+msgstr "Pontos revertidos pela encomenda cancelada/reembolsada #%s"
+
+#: src/WooCommerce/EarnHooks.php
+#, php-format
+msgid "Redeemed points restored for cancelled/refunded order #%s"
+msgstr "Pontos trocados restaurados pela encomenda cancelada/reembolsada #%s"
+
+# ==========================================================================
+# WooCommerce/OrderAdmin.php
+# ==========================================================================
+
+#: src/WooCommerce/OrderAdmin.php
+#, php-format
+msgid "Points Earned: %s"
+msgstr "Pontos Ganhos: %s"
+
+#: src/WooCommerce/OrderAdmin.php
+#, php-format
+msgid "Points Spent: %s"
+msgstr "Pontos Gastos: %s"
+
+#: src/WooCommerce/OrderAdmin.php
+#, php-format
+msgid "Loyalty Discount: %s"
+msgstr "Desconto de Fidelidade: %s"
+
+#: src/WooCommerce/OrderAdmin.php
+msgid "Points have been reversed (order cancelled/refunded)."
+msgstr "Os pontos foram revertidos (encomenda cancelada/reembolsada)."
+
+# ==========================================================================
+# Core/PointsService.php
+# ==========================================================================
+
+#: src/Core/PointsService.php
+msgid "Admin adjustment (add)"
+msgstr "Ajuste pelo admin (adição)"
+
+#: src/Core/PointsService.php
+msgid "Admin adjustment (deduct)"
+msgstr "Ajuste pelo admin (dedução)"
+
+#: src/Core/PointsService.php
+#, php-format
+msgid "Points expired after %d days"
+msgstr "Pontos expirados após %d dias"
+
+# ==========================================================================
+# Blocks/StoreApiExtension.php — schema descriptions & errors
+# ==========================================================================
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Current points balance."
+msgstr "Saldo atual de pontos."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Points currently being redeemed."
+msgstr "Pontos a serem trocados."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Currency value of redeemed points."
+msgstr "Valor monetário dos pontos trocados."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Points earned per currency unit."
+msgstr "Pontos ganhos por unidade monetária."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Whether redemption is enabled."
+msgstr "Se a troca está ativada."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Points the customer will earn with this order."
+msgstr "Pontos que o cliente ganhará com esta encomenda."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Number of points per currency unit in redeem rate."
+msgstr "Número de pontos por unidade monetária na taxa de troca."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Currency amount per redeem rate unit."
+msgstr "Valor monetário por unidade da taxa de troca."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Minimum points required to redeem."
+msgstr "Mínimo de pontos necessários para trocar."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Maximum percentage of cart that can be discounted."
+msgstr "Percentagem máxima do carrinho que pode ser descontada."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Store currency symbol."
+msgstr "Símbolo monetário da loja."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "You must be logged in to redeem points."
+msgstr "Tem de ter sessão iniciada para trocar pontos."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Points redemption is not enabled."
+msgstr "A troca de pontos não está ativada."
+
+#: src/Blocks/StoreApiExtension.php
+msgid "Cart not available."
+msgstr "Carrinho indisponível."

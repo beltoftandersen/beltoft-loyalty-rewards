@@ -1,0 +1,304 @@
+/* WooCommerce Loyalty Points - Frontend Styles */
+
+/* ── Product Message ─────────────────────────────────────────── */
+.wclr-product-message {
+    color: #16a34a;
+    font-size: 0.9em;
+    margin: 8px 0;
+}
+
+/* ── My Account: Balance Summary ────────────────────────────── */
+.wclr-myaccount .wclr-balance-summary,
+.wclr-ref-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.wclr-balance-card {
+    flex: 1;
+    min-width: 140px;
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.wclr-balance-card .wclr-label {
+    display: block;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.wclr-balance-card .wclr-value {
+    display: block;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: inherit;
+}
+
+.wclr-myaccount .wclr-earn-info {
+    color: #555;
+    margin-bottom: 24px;
+    font-size: 0.9em;
+}
+
+/* ── Transaction Table ──────────────────────────────────────── */
+.wclr-transactions {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+
+.wclr-transactions th {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    background: #f8f9fa;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #555;
+}
+
+.wclr-transactions td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.wclr-positive {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.wclr-negative {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.wclr-type {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.wclr-type--earn { background: #d4edda; color: #155724; }
+.wclr-type--redeem { background: #d1ecf1; color: #0c5460; }
+.wclr-type--admin_add { background: #fff3cd; color: #856404; }
+.wclr-type--admin_deduct { background: #f8d7da; color: #721c24; }
+.wclr-type--refund_reversal { background: #f8d7da; color: #721c24; }
+.wclr-type--expire { background: #f3f4f6; color: #6b7280; }
+
+.wclr-pagination {
+    margin-top: 20px;
+}
+
+/* ── Redeem Form ────────────────────────────────────────────── */
+.wclr-redeem-form {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 0.875em;
+}
+
+.wclr-redeem-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.wclr-redeem-title {
+    font-weight: 700;
+    font-size: 1em;
+    color: inherit;
+}
+
+.wclr-redeem-balance {
+    font-weight: 600;
+    color: inherit;
+}
+
+.wclr-redeem-earn {
+    margin: 0 0 12px;
+    color: #16a34a;
+    font-size: 0.875em;
+}
+
+/* ── Input + button row (matches WC coupon form layout) ── */
+.wclr-redeem-input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.wclr-redeem-input-row .input-text {
+    flex: 3 1 120px;
+    min-width: 0;
+    -moz-appearance: textfield;
+}
+
+.wclr-redeem-input-row .input-text::-webkit-inner-spin-button,
+.wclr-redeem-input-row .input-text::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.wclr-redeem-input-row .button {
+    flex: 1 1 auto;
+    white-space: nowrap;
+}
+
+.wclr-redeem-input-row .button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+    color: transparent;
+}
+
+.wclr-redeem-input-row .button.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid #333;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: wclr-spin 0.6s linear infinite;
+}
+
+@keyframes wclr-spin {
+    to { transform: rotate(360deg); }
+}
+
+.wclr-redeem-hint {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.wclr-redeem-available {
+    margin: 0 0 10px;
+    font-size: 0.875em;
+    color: inherit;
+}
+
+/* ── Applied state ── */
+.wclr-redeem-applied {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+}
+
+.wclr-redeem-applied__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.wclr-redeem-applied__label {
+    font-weight: 600;
+    color: #155724;
+}
+
+.wclr-redeem-applied__detail {
+    font-size: 0.875em;
+    color: #155724;
+}
+
+.wclr-redeem-remove {
+    background: none;
+    border: none;
+    color: #dc2626;
+    font-family: inherit;
+    font-size: 0.875em;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+}
+
+.wclr-redeem-remove:hover {
+    color: #991b1b;
+}
+
+.wclr-redeem-remove:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ── Inline notice ── */
+.wclr-redeem-notice {
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.8em;
+}
+
+.wclr-redeem-notice--error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.wclr-redeem-notice--success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* ── Guest Sign-Up Message ──────────────────────────────────── */
+.wclr-guest-message .wclr-guest-message__text {
+    margin: 0;
+    font-size: 0.875em;
+    color: inherit;
+    line-height: 1.5;
+}
+
+.wclr-guest-message .wclr-guest-message__text a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.wclr-guest-message .wclr-guest-message__extra {
+    margin: 8px 0 0;
+    font-size: 0.875em;
+    font-weight: 600;
+    color: #16a34a;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .wclr-myaccount .wclr-balance-summary,
+    .wclr-ref-stats {
+        flex-direction: column;
+    }
+
+    .wclr-transactions th:nth-child(4),
+    .wclr-transactions td:nth-child(4),
+    .wclr-transactions th:nth-child(5),
+    .wclr-transactions td:nth-child(5) {
+        display: none;
+    }
+}

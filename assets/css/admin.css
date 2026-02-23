@@ -1,0 +1,49 @@
+/* WooCommerce Loyalty Points - Admin Styles */
+
+/* ── Ledger Table ───────────────────────────────────────────── */
+.wclr-ledger-wrap .wclr-positive {
+    color: #0e9f6e;
+    font-weight: 600;
+}
+
+.wclr-ledger-wrap .wclr-negative {
+    color: #e02424;
+    font-weight: 600;
+}
+
+.wclr-ledger-wrap .wclr-type {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.wclr-type--earn { background: #def7ec; color: #03543f; }
+.wclr-type--redeem { background: #e1effe; color: #1e429f; }
+.wclr-type--admin_add { background: #fdf6b2; color: #723b13; }
+.wclr-type--admin_deduct { background: #fde8e8; color: #9b1c1c; }
+.wclr-type--refund_reversal { background: #fde8e8; color: #9b1c1c; }
+.wclr-type--expire { background: #f3f4f6; color: #6b7280; }
+
+/* ── Settings Page ──────────────────────────────────────────── */
+.wclr-settings-wrap .form-table th {
+    width: 260px;
+}
+
+.wclr-settings-wrap h2 {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+}
+
+.wclr-settings-wrap h2:first-of-type {
+    border-top: none;
+    margin-top: 0;
+}
+
+/* ── User Profile ───────────────────────────────────────────── */
+.wclr-user-profile th {
+    width: 200px;
+}
