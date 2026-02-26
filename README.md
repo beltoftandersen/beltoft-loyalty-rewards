@@ -24,7 +24,7 @@ Works with classic shortcode-based cart and checkout.
 - Points earned shown on product pages and order admin
 - Automatic reversal on cancellation or refund
 - HPOS (High-Performance Order Storage) compatible
-- Shortcodes: `[wclr_points_message]` and `[wclr_redeem_form]`
+- Shortcodes: `[blr_points_message]` and `[blr_redeem_form]`
 
 ## Installation
 

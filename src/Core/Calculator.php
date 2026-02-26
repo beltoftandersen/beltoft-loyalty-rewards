@@ -32,9 +32,12 @@ class Calculator {
             }
         }
 
-        // Subtract all coupon discounts (includes the loyalty virtual coupon if active,
-        // so no separate _wclr_discount_amount subtraction needed — that would double-count).
-        $total -= (float) $order->get_discount_total();
+        /*
+         * Do not subtract discounts here.
+         *
+         * WC_Order::get_total() already reflects all discounts/coupons, so
+         * subtracting get_discount_total() again would under-award points.
+         */
 
         $total = max( 0, $total );
 

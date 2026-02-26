@@ -92,10 +92,10 @@ class SettingsPage {
         add_settings_section( 'wclr_display', __( 'Display', 'beltoft-loyalty-rewards' ), '__return_null', $settings_slug );
         self::add_checkbox( 'show_myaccount_tab', __( 'Show "My Points" Tab in My Account', 'beltoft-loyalty-rewards' ), 'wclr_display', $settings_slug );
         $product_hook_desc = __( 'To display the points message in a custom location, use the shortcode:', 'beltoft-loyalty-rewards' )
-                           . '<br><code>[wclr_points_message]</code>';
+                           . '<br><code>[blr_points_message]</code>';
         self::add_checkbox( 'show_product_message', __( 'Show "Earn X Points" on Product Pages', 'beltoft-loyalty-rewards' ), 'wclr_display', $settings_slug, $product_hook_desc );
         $hook_desc = __( 'To display the redeem form in a custom location, use the shortcode:', 'beltoft-loyalty-rewards' )
-                   . '<br><code>[wclr_redeem_form]</code><br>'
+                   . '<br><code>[blr_redeem_form]</code><br>'
                    . __( 'Uncheck the options above to avoid compatibility issues.', 'beltoft-loyalty-rewards' );
         self::add_checkbox( 'redeem_show_on_cart', __( 'Show Redeem Form on Cart Page', 'beltoft-loyalty-rewards' ), 'wclr_display', $settings_slug, $hook_desc );
         self::add_checkbox( 'redeem_show_on_checkout', __( 'Show Redeem Form on Checkout Page', 'beltoft-loyalty-rewards' ), 'wclr_display', $settings_slug, $hook_desc );

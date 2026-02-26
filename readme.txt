@@ -32,7 +32,7 @@ A points-based loyalty system for WooCommerce. Customers earn points on orders a
 * Automatic reversal on cancellation or refund
 * Works with classic cart and checkout
 * HPOS compatible
-* Shortcodes: `[wclr_points_message]` and `[wclr_redeem_form]`
+* Shortcodes: `[blr_points_message]` and `[blr_redeem_form]`
 
 === Pro Add-on ===
 

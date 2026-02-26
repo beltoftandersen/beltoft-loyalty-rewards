@@ -52,8 +52,8 @@ class Plugin {
         add_action( 'wclr_product_points_message', [ __CLASS__, 'product_points_message' ] );
 
         // Shortcodes.
-        add_shortcode( 'wclr_points_message', [ __CLASS__, 'shortcode_points_message' ] );
-        add_shortcode( 'wclr_redeem_form', [ RedeemHooks::class, 'shortcode_redeem_form' ] );
+        add_shortcode( 'blr_points_message', [ __CLASS__, 'shortcode_points_message' ] );
+        add_shortcode( 'blr_redeem_form', [ RedeemHooks::class, 'shortcode_redeem_form' ] );
 
         // Assets.
         add_action( 'admin_enqueue_scripts', [ __CLASS__, 'enqueue_admin_assets' ] );
@@ -121,7 +121,7 @@ class Plugin {
     }
 
     /**
-     * Shortcode [wclr_points_message] - renders the "earn X points" message.
+     * Shortcode [blr_points_message] - renders the "earn X points" message.
      */
     public static function shortcode_points_message() {
         ob_start();

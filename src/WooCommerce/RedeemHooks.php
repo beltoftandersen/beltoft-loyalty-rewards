@@ -570,7 +570,7 @@ class RedeemHooks {
     }
 
     /**
-     * Shortcode [wclr_redeem_form] - renders the redeem form.
+     * Shortcode [blr_redeem_form] - renders the redeem form.
      */
     public static function shortcode_redeem_form() {
         ob_start();
