@@ -2,7 +2,7 @@
 
 Points-based loyalty system for WooCommerce. Customers earn points on orders and redeem them for discounts at cart or checkout.
 
-- Stable version: 1.2.3
+- Stable version: 1.2.9
 - Requires: WordPress 6.2+, WooCommerce 7.0+, PHP 7.4+
 - Author: beltoft.net
 - License: GPLv2 or later
@@ -75,6 +75,11 @@ The optional [Beltoft Loyalty Rewards for WooCommerce - Pro](https://chimkins.co
 - Text domain: `beltoft-loyalty-rewards`
 
 ## Changelog
+
+### 1.2.9
+
+- Fixed order earning points under-award caused by subtracting discounts twice on completed/processing orders.
+- Updated public shortcodes to slug-based names: `[blr_points_message]` and `[blr_redeem_form]`.
 
 ### 1.2.3
 

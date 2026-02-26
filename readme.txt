@@ -4,7 +4,7 @@ Tags: loyalty, points, rewards, discount, woocommerce
 Requires at least: 6.2
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.2.8
+Stable tag: 1.2.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,10 @@ Yes.
 4. Admin points ledger.
 
 == Changelog ==
+
+= 1.2.9 =
+* Fixed: Order points could be under-awarded when discounts were subtracted twice.
+* Changed: Shortcodes now use slug-based names: `[blr_points_message]` and `[blr_redeem_form]`.
 
 = 1.2.8 =
 * Improved: Redeem form syncs when coupon is removed via WooCommerce cart totals.

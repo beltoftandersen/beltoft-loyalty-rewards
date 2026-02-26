@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Beltoft Loyalty Rewards for WooCommerce
  * Description: Earn points on purchases and redeem them for cart discounts.
- * Version:     1.2.8
+ * Version:     1.2.9
  * Author:      beltoft.net
  * Requires PHP: 7.4
  * Requires at least: 6.2
@@ -32,7 +32,7 @@ spl_autoload_register( function ( $class ) {
 /* ── Constants ─────────────────────────────────────────────────── */
 define( 'WCLR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WCLR_URL',  plugin_dir_url( __FILE__ ) );
-define( 'WCLR_VER',  '1.2.8' );
+define( 'WCLR_VER',  '1.2.9' );
 
 /* ── Activation / Deactivation ─────────────────────────────────── */
 register_activation_hook( __FILE__, [ 'LoyaltyRewards\\Support\\Installer', 'activate' ] );
