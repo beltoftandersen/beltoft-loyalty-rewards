@@ -4,6 +4,7 @@
  * Description: Earn points on purchases and redeem them for cart discounts.
  * Version:     1.2.9
  * Author:      beltoft.net
+ * Author URI:  https://beltoft.net
  * Requires PHP: 7.4
  * Requires at least: 6.2
  * Requires Plugins: woocommerce
