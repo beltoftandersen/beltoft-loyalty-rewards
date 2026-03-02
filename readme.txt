@@ -32,7 +32,7 @@ A points-based loyalty system for WooCommerce. Customers earn points on orders a
 * Automatic reversal on cancellation or refund
 * Works with classic cart and checkout
 * HPOS compatible
-* Shortcodes: `[blr_points_message]` and `[blr_redeem_form]`
+* Shortcodes: `[blrw_points_message]` and `[blrw_redeem_form]`
 
 === Pro Add-on ===
 
@@ -81,7 +81,7 @@ Yes.
 
 = 1.2.9 =
 * Fixed: Order points could be under-awarded when discounts were subtracted twice.
-* Changed: Shortcodes now use slug-based names: `[blr_points_message]` and `[blr_redeem_form]`.
+* Changed: Shortcodes now use slug-based names: `[blrw_points_message]` and `[blrw_redeem_form]`.
 
 = 1.2.8 =
 * Improved: Redeem form syncs when coupon is removed via WooCommerce cart totals.

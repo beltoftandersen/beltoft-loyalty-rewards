@@ -24,7 +24,7 @@ Works with classic shortcode-based cart and checkout.
 - Points earned shown on product pages and order admin
 - Automatic reversal on cancellation or refund
 - HPOS (High-Performance Order Storage) compatible
-- Shortcodes: `[blr_points_message]` and `[blr_redeem_form]`
+- Shortcodes: `[blrw_points_message]` and `[blrw_redeem_form]`
 
 ## Installation
 
@@ -79,7 +79,7 @@ The optional [Beltoft Loyalty Rewards for WooCommerce - Pro](https://chimkins.co
 ### 1.2.9
 
 - Fixed order earning points under-award caused by subtracting discounts twice on completed/processing orders.
-- Updated public shortcodes to slug-based names: `[blr_points_message]` and `[blr_redeem_form]`.
+- Updated public shortcodes to slug-based names: `[blrw_points_message]` and `[blrw_redeem_form]`.
 
 ### 1.2.3
 

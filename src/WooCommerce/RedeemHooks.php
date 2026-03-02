@@ -34,7 +34,7 @@ class RedeemHooks {
         }
 
         // Custom hook for themes/plugins to place the form anywhere.
-        add_action( 'wclr_redeem_form', [ __CLASS__, 'render_redeem_form' ] );
+        add_action( 'blrw_redeem_form', [ __CLASS__, 'render_redeem_form' ] );
 
         // AJAX handlers.
         add_action( 'wc_ajax_wclr_apply_points', [ __CLASS__, 'ajax_apply_points' ] );
@@ -131,7 +131,7 @@ class RedeemHooks {
      * Render the points redemption form.
      *
      * Automatically outputs on cart/checkout (if enabled in settings).
-     * Can also be triggered anywhere via: do_action( 'wclr_redeem_form' );
+     * Can also be triggered anywhere via: do_action( 'blrw_redeem_form' );
      */
     public static function render_redeem_form() {
         if ( ! is_user_logged_in() ) {
@@ -183,7 +183,7 @@ class RedeemHooks {
              * Fires inside the redeem form after the earn estimate.
              * Used by Pro to render tier badge and campaign banner.
              */
-            do_action( 'wclr_redeem_form_after_earn', $user_id, $points_to_earn );
+            do_action( 'blrw_redeem_form_after_earn', $user_id, $points_to_earn );
             ?>
 
             <?php if ( $is_applied ) : ?>
@@ -570,7 +570,7 @@ class RedeemHooks {
     }
 
     /**
-     * Shortcode [blr_redeem_form] - renders the redeem form.
+     * Shortcode [blrw_redeem_form] - renders the redeem form.
      */
     public static function shortcode_redeem_form() {
         ob_start();
