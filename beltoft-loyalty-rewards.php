@@ -50,11 +50,6 @@ add_action( 'before_woocommerce_init', function () {
     }
 } );
 
-/* ── Translations ─────────────────────────────────────────────── */
-add_action( 'init', function () {
-    load_plugin_textdomain( 'beltoft-loyalty-rewards', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-} );
-
 /* ── Bootstrap ─────────────────────────────────────────────────── */
 add_action( 'plugins_loaded', function () {
     if ( ! class_exists( 'WooCommerce' ) ) {
