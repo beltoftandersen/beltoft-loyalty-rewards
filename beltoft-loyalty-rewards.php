@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Beltoft Loyalty Rewards for WooCommerce
  * Description: Earn points on purchases and redeem them for cart discounts.
- * Version:     1.2.9
+ * Version:     1.2.12
  * Author:      beltoft.net
  * Author URI:  https://beltoft.net
  * Requires PHP: 7.4
@@ -33,7 +33,7 @@ spl_autoload_register( function ( $class ) {
 /* ── Constants ─────────────────────────────────────────────────── */
 define( 'WCLR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WCLR_URL',  plugin_dir_url( __FILE__ ) );
-define( 'WCLR_VER',  '1.2.9' );
+define( 'WCLR_VER',  '1.2.12' );
 
 /* ── Activation / Deactivation ─────────────────────────────────── */
 register_activation_hook( __FILE__, [ 'LoyaltyRewards\\Support\\Installer', 'activate' ] );
@@ -48,6 +48,11 @@ add_action( 'before_woocommerce_init', function () {
             true
         );
     }
+} );
+
+/* ── Translations ─────────────────────────────────────────────── */
+add_action( 'init', function () {
+    load_plugin_textdomain( 'beltoft-loyalty-rewards', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 } );
 
 /* ── Bootstrap ─────────────────────────────────────────────────── */
@@ -65,7 +70,7 @@ add_action( 'plugins_loaded', function () {
 
 /* ── Settings link ─────────────────────────────────────────────── */
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), function ( $links ) {
-    $url = admin_url( 'admin.php?page=wclr-loyalty' );
+    $url = admin_url( 'admin.php?page=blrw-loyalty' );
     array_unshift( $links, '<a href="' . esc_url( $url ) . '">' . esc_html__( 'Settings', 'beltoft-loyalty-rewards' ) . '</a>' );
     return $links;
 } );
