@@ -76,8 +76,15 @@ class MyAccount {
         $spent    = (int) get_user_meta( $user_id, '_wclr_lifetime_spent', true );
         $opts     = Options::get();
 
-        // Pagination.
-        $page     = max( 1, absint( get_query_var( 'paged', 1 ) ) );
+        // Pagination – WooCommerce endpoints don't support /page/N/ URLs,
+        // so we read the page number from the endpoint query var or ?paged=N.
+        $endpoint_val = get_query_var( 'loyalty-points', '' );
+        if ( is_numeric( $endpoint_val ) && (int) $endpoint_val > 0 ) {
+            $page = (int) $endpoint_val;
+        } else {
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only pagination.
+            $page = max( 1, absint( $_GET['paged'] ?? 1 ) );
+        }
         $per_page = 15;
         $offset   = ( $page - 1 ) * $per_page;
         $total    = LedgerRepository::count_by_user( $user_id );
@@ -85,23 +92,23 @@ class MyAccount {
         $pages    = (int) ceil( $total / $per_page );
         ?>
 
-        <div class="wclr-myaccount">
-            <div class="wclr-balance-summary">
-                <div class="wclr-balance-card">
-                    <span class="wclr-label"><?php esc_html_e( 'Current Balance', 'beltoft-loyalty-rewards' ); ?></span>
-                    <span class="wclr-value"><?php echo esc_html( number_format_i18n( $balance ) ); ?></span>
+        <div class="blrw-myaccount">
+            <div class="blrw-balance-summary">
+                <div class="blrw-balance-card">
+                    <span class="blrw-label"><?php esc_html_e( 'Current Balance', 'beltoft-loyalty-rewards' ); ?></span>
+                    <span class="blrw-value"><?php echo esc_html( number_format_i18n( $balance ) ); ?></span>
                 </div>
-                <div class="wclr-balance-card">
-                    <span class="wclr-label"><?php esc_html_e( 'Lifetime Earned', 'beltoft-loyalty-rewards' ); ?></span>
-                    <span class="wclr-value"><?php echo esc_html( number_format_i18n( $lifetime ) ); ?></span>
+                <div class="blrw-balance-card">
+                    <span class="blrw-label"><?php esc_html_e( 'Lifetime Earned', 'beltoft-loyalty-rewards' ); ?></span>
+                    <span class="blrw-value"><?php echo esc_html( number_format_i18n( $lifetime ) ); ?></span>
                 </div>
-                <div class="wclr-balance-card">
-                    <span class="wclr-label"><?php esc_html_e( 'Lifetime Spent', 'beltoft-loyalty-rewards' ); ?></span>
-                    <span class="wclr-value"><?php echo esc_html( number_format_i18n( $spent ) ); ?></span>
+                <div class="blrw-balance-card">
+                    <span class="blrw-label"><?php esc_html_e( 'Lifetime Spent', 'beltoft-loyalty-rewards' ); ?></span>
+                    <span class="blrw-value"><?php echo esc_html( number_format_i18n( $spent ) ); ?></span>
                 </div>
             </div>
 
-            <p class="wclr-earn-info">
+            <p class="blrw-earn-info">
                 <?php
                 $effective_rate = apply_filters( 'wclr_displayed_earn_rate', (float) $opts['earn_rate'], $user_id );
                 printf(
@@ -125,7 +132,7 @@ class MyAccount {
 
             <?php if ( ! empty( $entries ) ) : ?>
                 <h3><?php esc_html_e( 'Transaction History', 'beltoft-loyalty-rewards' ); ?></h3>
-                <table class="wclr-transactions woocommerce-orders-table">
+                <table class="blrw-transactions woocommerce-orders-table">
                     <thead>
                         <tr>
                             <th><?php esc_html_e( 'Date', 'beltoft-loyalty-rewards' ); ?></th>
@@ -140,11 +147,11 @@ class MyAccount {
                             <tr>
                                 <td><?php echo esc_html( date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), strtotime( $entry->created_at ) ) ); ?></td>
                                 <td>
-                                    <span class="wclr-type wclr-type--<?php echo esc_attr( $entry->type ); ?>">
+                                    <span class="blrw-type blrw-type--<?php echo esc_attr( $entry->type ); ?>">
                                         <?php echo esc_html( LedgerRepository::type_label( $entry->type ) ); ?>
                                     </span>
                                 </td>
-                                <td class="<?php echo $entry->points_delta >= 0 ? 'wclr-positive' : 'wclr-negative'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static strings. ?>">
+                                <td class="<?php echo $entry->points_delta >= 0 ? 'blrw-positive' : 'blrw-negative'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static strings. ?>">
                                     <?php echo esc_html( ( $entry->points_delta >= 0 ? '+' : '' ) . number_format_i18n( $entry->points_delta ) ); ?>
                                 </td>
                                 <td><?php echo esc_html( number_format_i18n( $entry->balance_after ) ); ?></td>
@@ -155,11 +162,11 @@ class MyAccount {
                 </table>
 
                 <?php if ( $pages > 1 ) : ?>
-                    <nav class="wclr-pagination woocommerce-pagination">
+                    <nav class="blrw-pagination woocommerce-pagination">
                         <?php
                         echo wp_kses_post( paginate_links( [
-                            'base'    => esc_url( wc_get_endpoint_url( 'loyalty-points' ) ) . '%_%',
-                            'format'  => 'page/%#%/',
+                            'base'    => esc_url( wc_get_endpoint_url( 'loyalty-points', '%#%', wc_get_page_permalink( 'myaccount' ) ) ),
+                            'format'  => '',
                             'current' => $page,
                             'total'   => $pages,
                         ] ) );
