@@ -88,6 +88,7 @@ class StoreApiExtension {
         $base['redeeming_points'] = $session_points;
         $base['discount_value']   = $discount_value;
         $base['points_to_earn']   = Calculator::points_for_amount( $subtotal );
+        $base['max_points']       = Calculator::max_redeemable_points( $subtotal, $balance );
 
         return $base;
     }
@@ -155,6 +156,11 @@ class StoreApiExtension {
             'points_value' => [
                 'description' => __( 'Monetary value of points to earn.', 'beltoft-loyalty-rewards' ),
                 'type'        => 'number',
+                'readonly'    => true,
+            ],
+            'max_points' => [
+                'description' => __( 'Maximum redeemable points for the current cart.', 'beltoft-loyalty-rewards' ),
+                'type'        => 'integer',
                 'readonly'    => true,
             ],
             'signup_url' => [
