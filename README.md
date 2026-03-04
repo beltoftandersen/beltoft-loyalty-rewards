@@ -57,7 +57,7 @@ Works with classic shortcode-based cart and checkout.
 
 ## Pro Add-on
 
-The optional [Beltoft Loyalty Rewards for WooCommerce - Pro](https://chimkins.com/customer-loyalty-pro) add-on adds:
+The optional [Beltoft Loyalty Rewards for WooCommerce - Pro](https://beltoft.net/dk/plugins/loyalty-rewards) add-on adds:
 
 - Referral program with shareable links and anti-fraud hold
 - Bonus points for signup, reviews, and daily login
