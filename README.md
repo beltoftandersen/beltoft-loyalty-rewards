@@ -103,9 +103,9 @@ The optional [Beltoft Loyalty Rewards for WooCommerce - Pro](https://beltoft.net
 
 - Initial release.
 
-## About the Author
+## About
 
-Beltoft Loyalty Rewards for WooCommerce is built and maintained by [Chimkins IT](https://chimkins.com), a team specializing in WooCommerce and Odoo ERP integrations. Check out our [Odoo WooCommerce Connector](https://chimkins.com) for real-time sync between your WooCommerce store and Odoo.
+Beltoft Loyalty Rewards for WooCommerce is built and maintained by [beltoft.net](https://beltoft.net).
 
 ## License
 
