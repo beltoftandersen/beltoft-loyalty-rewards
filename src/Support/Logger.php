@@ -11,11 +11,11 @@ defined( 'ABSPATH' ) || exit;
  * - info():  always logs (notable events: cron runs, bulk operations)
  * - error(): always logs (failures, unexpected states)
  *
- * Logs appear in WooCommerce > Status > Logs as wclr-*.log
+ * Logs appear in WooCommerce > Status > Logs as blrw-*.log
  */
 class Logger {
 
-    const SOURCE = 'wclr';
+    const SOURCE = 'blrw';
 
     /**
      * Debug-level log (only when debug_logging is enabled).

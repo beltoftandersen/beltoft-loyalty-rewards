@@ -1,5 +1,9 @@
 /* WooCommerce Loyalty Points - Frontend Styles */
 
+:root {
+    --blrw-accent: #0675c4;
+}
+
 /* ── Product Message ─────────────────────────────────────────── */
 .blrw-product-message {
     color: #16a34a;
@@ -121,8 +125,8 @@
 }
 
 .blrw-pagination .page-numbers.current {
-    background: #0675c4;
-    border-color: #0675c4;
+    background: var(--blrw-accent);
+    border-color: var(--blrw-accent);
     color: #fff;
     font-weight: 600;
 }

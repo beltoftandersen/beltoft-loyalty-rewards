@@ -25,7 +25,7 @@ class OrderAdmin {
             return;
         }
         ?>
-        <div class="wclr-order-info" style="margin-top:12px;padding:8px 12px;background:#f8f8f8;border-left:3px solid #7b2d8a;">
+        <div class="blrw-order-info" style="margin-top:12px;padding:8px 12px;background:#f8f8f8;border-left:3px solid #7b2d8a;">
             <h4 style="margin:0 0 6px;"><?php esc_html_e( 'Loyalty Points', 'beltoft-loyalty-rewards' ); ?></h4>
 
             <?php if ( $earned ) : ?>

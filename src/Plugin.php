@@ -102,7 +102,7 @@ class Plugin {
         $points = \LoyaltyRewards\Core\Calculator::points_for_amount( $price );
         if ( $points > 0 ) {
             printf(
-                '<p class="wclr-product-message">%s</p>',
+                '<p class="blrw-product-message">%s</p>',
                 sprintf(
                     /* translators: %s: number of points */
                     wp_kses( __( 'Purchase this product and earn %s points!', 'beltoft-loyalty-rewards' ), [ 'strong' => [] ] ),
@@ -133,11 +133,11 @@ class Plugin {
      * Admin CSS/JS - only on our pages.
      */
     public static function enqueue_admin_assets( $hook ) {
-        $our_pages = [ 'woocommerce_page_wclr-loyalty' ];
+        $our_pages = [ 'woocommerce_page_blrw-loyalty' ];
         $is_user   = in_array( $hook, [ 'user-edit.php', 'profile.php' ], true );
 
         if ( in_array( $hook, $our_pages, true ) || $is_user ) {
-            wp_enqueue_style( 'wclr-admin', WCLR_URL . 'assets/css/admin.css', [], WCLR_VER );
+            wp_enqueue_style( 'blrw-admin', WCLR_URL . 'assets/css/admin.css', [], WCLR_VER );
         }
     }
 
@@ -149,13 +149,13 @@ class Plugin {
             return;
         }
 
-        wp_enqueue_style( 'wclr-frontend', WCLR_URL . 'assets/css/frontend.css', [], WCLR_VER );
+        wp_enqueue_style( 'blrw-frontend', WCLR_URL . 'assets/css/frontend.css', [], WCLR_VER );
 
         if ( is_cart() || is_checkout() ) {
-            wp_enqueue_script( 'wclr-redeem', WCLR_URL . 'assets/js/redeem.js', [ 'jquery' ], WCLR_VER, true );
-            wp_localize_script( 'wclr-redeem', 'wclr_redeem', [
+            wp_enqueue_script( 'blrw-redeem', WCLR_URL . 'assets/js/redeem.js', [ 'jquery' ], WCLR_VER, true );
+            wp_localize_script( 'blrw-redeem', 'wclr_redeem', [
                 'ajax_url' => \WC_AJAX::get_endpoint( '%%endpoint%%' ),
-                'nonce'    => wp_create_nonce( 'wclr-redeem' ),
+                'nonce'    => wp_create_nonce( 'blrw-redeem' ),
                 'i18n'     => [
                     'invalid_points' => __( 'Please enter a valid number of points.', 'beltoft-loyalty-rewards' ),
                     'apply_error'    => __( 'Error applying points.', 'beltoft-loyalty-rewards' ),

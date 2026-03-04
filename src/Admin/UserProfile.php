@@ -28,10 +28,10 @@ class UserProfile {
         $balance  = PointsService::get_balance( $user->ID );
         $earned   = (int) get_user_meta( $user->ID, '_wclr_lifetime_earned', true );
         $spent    = (int) get_user_meta( $user->ID, '_wclr_lifetime_spent', true );
-        $ledger_url = admin_url( 'admin.php?page=wclr-loyalty&tab=ledger&user_id=' . $user->ID );
+        $ledger_url = admin_url( 'admin.php?page=blrw-loyalty&tab=ledger&user_id=' . $user->ID );
         ?>
         <h2><?php esc_html_e( 'Loyalty Points', 'beltoft-loyalty-rewards' ); ?></h2>
-        <table class="form-table wclr-user-profile">
+        <table class="form-table blrw-user-profile">
             <tr>
                 <th><?php esc_html_e( 'Current Balance', 'beltoft-loyalty-rewards' ); ?></th>
                 <td>

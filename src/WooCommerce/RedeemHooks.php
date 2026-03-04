@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 class RedeemHooks {
 
-    const COUPON_CODE = 'wclr-loyalty-discount';
+    const COUPON_CODE = 'blrw-loyalty-discount';
 
     public static function init() {
         // Virtual coupon data.
@@ -160,14 +160,14 @@ class RedeemHooks {
         $min_points     = max( 1, (int) Options::get( 'redeem_min_points' ) );
         $max_percent    = (int) Options::get( 'redeem_max_percent' );
         ?>
-        <div class="wclr-redeem-form" id="wclr-redeem-form">
-            <div class="wclr-redeem-header">
-                <span class="wclr-redeem-title"><?php esc_html_e( 'Loyalty Points', 'beltoft-loyalty-rewards' ); ?></span>
-                <span class="wclr-redeem-balance"><?php echo esc_html( number_format_i18n( $balance ) ); ?> <?php esc_html_e( 'pts', 'beltoft-loyalty-rewards' ); ?></span>
+        <div class="blrw-redeem-form" id="blrw-redeem-form">
+            <div class="blrw-redeem-header">
+                <span class="blrw-redeem-title"><?php esc_html_e( 'Loyalty Points', 'beltoft-loyalty-rewards' ); ?></span>
+                <span class="blrw-redeem-balance"><?php echo esc_html( number_format_i18n( $balance ) ); ?> <?php esc_html_e( 'pts', 'beltoft-loyalty-rewards' ); ?></span>
             </div>
 
             <?php if ( $points_to_earn > 0 ) : ?>
-                <p class="wclr-redeem-earn">
+                <p class="blrw-redeem-earn">
                     <?php
                     printf(
                         /* translators: %s: number of points */
@@ -187,10 +187,10 @@ class RedeemHooks {
             ?>
 
             <?php if ( $is_applied ) : ?>
-                <div class="wclr-redeem-applied">
-                    <div class="wclr-redeem-applied__info">
-                        <span class="wclr-redeem-applied__label"><?php esc_html_e( 'Points discount applied', 'beltoft-loyalty-rewards' ); ?></span>
-                        <span class="wclr-redeem-applied__detail">
+                <div class="blrw-redeem-applied">
+                    <div class="blrw-redeem-applied__info">
+                        <span class="blrw-redeem-applied__label"><?php esc_html_e( 'Points discount applied', 'beltoft-loyalty-rewards' ); ?></span>
+                        <span class="blrw-redeem-applied__detail">
                             <?php
                             printf(
                                 /* translators: 1: points, 2: discount amount */
@@ -201,12 +201,12 @@ class RedeemHooks {
                             ?>
                         </span>
                     </div>
-                    <button type="button" class="wclr-redeem-remove" id="wclr-remove-points">
+                    <button type="button" class="blrw-redeem-remove" id="blrw-remove-points">
                         <?php esc_html_e( 'Remove', 'beltoft-loyalty-rewards' ); ?>
                     </button>
                 </div>
             <?php elseif ( $can_redeem ) : ?>
-                <p class="wclr-redeem-available">
+                <p class="blrw-redeem-available">
                     <?php
                     printf(
                         /* translators: 1: max points, 2: max discount */
@@ -216,23 +216,23 @@ class RedeemHooks {
                     );
                     ?>
                 </p>
-                <div class="wclr-redeem-input-row">
-                    <label for="wclr-points-input" class="screen-reader-text">
+                <div class="blrw-redeem-input-row">
+                    <label for="blrw-points-input" class="screen-reader-text">
                         <?php esc_html_e( 'Points to redeem', 'beltoft-loyalty-rewards' ); ?>
                     </label>
-                    <input type="number" id="wclr-points-input" name="wclr_points"
+                    <input type="number" id="blrw-points-input" name="wclr_points"
                            class="input-text"
                            placeholder="<?php esc_attr_e( 'Points to redeem', 'beltoft-loyalty-rewards' ); ?>"
                            min="<?php echo esc_attr( $min_points ); ?>"
                            max="<?php echo esc_attr( $max_points ); ?>"
                            value="<?php echo esc_attr( $max_points ); ?>"
                            step="1" />
-                    <button type="button" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?> wclr-apply-points" id="wclr-apply-points">
+                    <button type="button" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?> blrw-apply-points" id="blrw-apply-points">
                         <?php esc_html_e( 'Apply', 'beltoft-loyalty-rewards' ); ?>
                     </button>
                 </div>
                 <?php if ( $min_points > 1 && $max_percent < 100 ) : ?>
-                    <span class="wclr-redeem-hint">
+                    <span class="blrw-redeem-hint">
                         <?php
                         printf(
                             /* translators: 1: minimum points, 2: max percentage */
@@ -243,7 +243,7 @@ class RedeemHooks {
                         ?>
                     </span>
                 <?php elseif ( $min_points > 1 ) : ?>
-                    <span class="wclr-redeem-hint">
+                    <span class="blrw-redeem-hint">
                         <?php
                         printf(
                             /* translators: %s: minimum points */
@@ -253,7 +253,7 @@ class RedeemHooks {
                         ?>
                     </span>
                 <?php elseif ( $max_percent < 100 ) : ?>
-                    <span class="wclr-redeem-hint">
+                    <span class="blrw-redeem-hint">
                         <?php
                         printf(
                             /* translators: %s: max percentage */
@@ -265,7 +265,7 @@ class RedeemHooks {
                 <?php endif; ?>
             <?php endif; ?>
 
-            <div class="wclr-redeem-notice" id="wclr-redeem-notice" style="display:none;"></div>
+            <div class="blrw-redeem-notice" id="blrw-redeem-notice" style="display:none;"></div>
         </div>
         <?php
     }
@@ -299,7 +299,7 @@ class RedeemHooks {
 
         $signup_url = Options::get_signup_url();
 
-        wp_enqueue_style( 'wclr-frontend', WCLR_URL . 'assets/css/frontend.css', [], WCLR_VER );
+        wp_enqueue_style( 'blrw-frontend', WCLR_URL . 'assets/css/frontend.css', [], WCLR_VER );
 
         /**
          * Filter the guest points message parts.
@@ -325,11 +325,11 @@ class RedeemHooks {
         $extra      = $parts['extra'];
 
         ?>
-        <div class="wclr-redeem-form wclr-guest-message">
-            <div class="wclr-redeem-header">
-                <span class="wclr-redeem-title"><?php esc_html_e( 'Loyalty Points', 'beltoft-loyalty-rewards' ); ?></span>
+        <div class="blrw-redeem-form blrw-guest-message">
+            <div class="blrw-redeem-header">
+                <span class="blrw-redeem-title"><?php esc_html_e( 'Loyalty Points', 'beltoft-loyalty-rewards' ); ?></span>
             </div>
-            <p class="wclr-guest-message__text">
+            <p class="blrw-guest-message__text">
                 <?php
                 printf(
                     wp_kses(
@@ -345,7 +345,7 @@ class RedeemHooks {
                 ?>
             </p>
             <?php if ( $extra ) : ?>
-                <p class="wclr-guest-message__extra"><?php echo wp_kses_post( $extra ); ?></p>
+                <p class="blrw-guest-message__extra"><?php echo wp_kses_post( $extra ); ?></p>
             <?php endif; ?>
         </div>
         <?php
@@ -410,7 +410,7 @@ class RedeemHooks {
      * AJAX: Apply points.
      */
     public static function ajax_apply_points() {
-        check_ajax_referer( 'wclr-redeem', 'security' );
+        check_ajax_referer( 'blrw-redeem', 'security' );
 
         $user_id = get_current_user_id();
         if ( ! $user_id ) {
@@ -447,7 +447,7 @@ class RedeemHooks {
      * AJAX: Remove points.
      */
     public static function ajax_remove_points() {
-        check_ajax_referer( 'wclr-redeem', 'security' );
+        check_ajax_referer( 'blrw-redeem', 'security' );
 
         Logger::debug( sprintf( '[RedeemHooks] remove_points — user #%d', get_current_user_id() ) );
 
@@ -582,15 +582,15 @@ class RedeemHooks {
      * Ensure redeem CSS + JS are loaded when the form renders via custom hook.
      */
     private static function maybe_enqueue_assets() {
-        if ( wp_script_is( 'wclr-redeem', 'enqueued' ) ) {
+        if ( wp_script_is( 'blrw-redeem', 'enqueued' ) ) {
             return;
         }
 
-        wp_enqueue_style( 'wclr-frontend', WCLR_URL . 'assets/css/frontend.css', [], WCLR_VER );
-        wp_enqueue_script( 'wclr-redeem', WCLR_URL . 'assets/js/redeem.js', [ 'jquery' ], WCLR_VER, true );
-        wp_localize_script( 'wclr-redeem', 'wclr_redeem', [
+        wp_enqueue_style( 'blrw-frontend', WCLR_URL . 'assets/css/frontend.css', [], WCLR_VER );
+        wp_enqueue_script( 'blrw-redeem', WCLR_URL . 'assets/js/redeem.js', [ 'jquery' ], WCLR_VER, true );
+        wp_localize_script( 'blrw-redeem', 'wclr_redeem', [
             'ajax_url' => \WC_AJAX::get_endpoint( '%%endpoint%%' ),
-            'nonce'    => wp_create_nonce( 'wclr-redeem' ),
+            'nonce'    => wp_create_nonce( 'blrw-redeem' ),
             'i18n'     => [
                 'invalid_points' => __( 'Please enter a valid number of points.', 'beltoft-loyalty-rewards' ),
                 'apply_error'    => __( 'Error applying points.', 'beltoft-loyalty-rewards' ),

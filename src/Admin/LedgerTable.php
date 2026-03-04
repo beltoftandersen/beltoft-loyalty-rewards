@@ -99,7 +99,7 @@ class LedgerTable extends \WP_List_Table {
                 return '<a href="' . esc_url( $order->get_edit_order_url() ) . '">#' . esc_html( $item->order_id ) . '</a>';
 
             case 'points_delta':
-                $class = $item->points_delta >= 0 ? 'wclr-positive' : 'wclr-negative';
+                $class = $item->points_delta >= 0 ? 'blrw-positive' : 'blrw-negative';
                 $sign  = $item->points_delta >= 0 ? '+' : '';
                 return '<span class="' . esc_attr( $class ) . '">' . esc_html( $sign . number_format_i18n( $item->points_delta ) ) . '</span>';
 
@@ -107,7 +107,7 @@ class LedgerTable extends \WP_List_Table {
                 return esc_html( number_format_i18n( $item->balance_after ) );
 
             case 'type':
-                return '<span class="wclr-type wclr-type--' . esc_attr( $item->type ) . '">'
+                return '<span class="blrw-type blrw-type--' . esc_attr( $item->type ) . '">'
                        . esc_html( LedgerRepository::type_label( $item->type ) )
                        . '</span>';
 

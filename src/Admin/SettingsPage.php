@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 class SettingsPage {
 
     const GROUP = 'wclr_settings_group';
-    const SLUG  = 'wclr-loyalty';
+    const SLUG  = 'blrw-loyalty';
 
     public static function init() {
         add_action( 'admin_menu', [ __CLASS__, 'add_menu' ] );
@@ -141,7 +141,7 @@ class SettingsPage {
             'ledger'   => __( 'Points Ledger', 'beltoft-loyalty-rewards' ),
         ] );
         ?>
-        <div class="wrap wclr-settings-wrap">
+        <div class="wrap blrw-settings-wrap">
             <h1><?php esc_html_e( 'Loyalty Rewards', 'beltoft-loyalty-rewards' ); ?></h1>
 
             <nav class="nav-tab-wrapper">
@@ -193,13 +193,13 @@ class SettingsPage {
 
         $stats = LedgerRepository::get_summary_stats();
         ?>
-        <div class="wclr-ledger-wrap" style="margin-top:16px;">
+        <div class="blrw-ledger-wrap" style="margin-top:16px;">
             <a href="<?php echo esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=wclr_export_ledger' ), 'wclr_export' ) ); ?>"
                class="page-title-action" style="margin-bottom:12px;display:inline-block;">
                 <?php esc_html_e( 'Export CSV', 'beltoft-loyalty-rewards' ); ?>
             </a>
 
-            <div class="wclr-stats-cards" style="display:flex;gap:16px;margin:16px 0;">
+            <div class="blrw-stats-cards" style="display:flex;gap:16px;margin:16px 0;">
                 <?php
                 $cards = [
                     __( 'In Circulation', 'beltoft-loyalty-rewards' )     => number_format_i18n( $stats['total_in_circulation'] ),

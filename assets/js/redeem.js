@@ -18,25 +18,25 @@
     }
 
     function showNotice(message, type) {
-        var $notice = $('#wclr-redeem-notice');
+        var $notice = $('#blrw-redeem-notice');
         if (!$notice.length) return;
         $notice
-            .removeClass('wclr-redeem-notice--error wclr-redeem-notice--success')
-            .addClass('wclr-redeem-notice--' + type)
+            .removeClass('blrw-redeem-notice--error blrw-redeem-notice--success')
+            .addClass('blrw-redeem-notice--' + type)
             .text(message)
             .show();
     }
 
     function hideNotice() {
-        $('#wclr-redeem-notice').hide().removeClass('wclr-redeem-notice--error wclr-redeem-notice--success');
+        $('#blrw-redeem-notice').hide().removeClass('blrw-redeem-notice--error blrw-redeem-notice--success');
     }
 
     // Apply points.
-    $(document.body).on('click', '#wclr-apply-points', function (e) {
+    $(document.body).on('click', '#blrw-apply-points', function (e) {
         e.preventDefault();
 
         var $btn = $(this);
-        var points = parseInt($('#wclr-points-input').val(), 10);
+        var points = parseInt($('#blrw-points-input').val(), 10);
 
         if (!points || points <= 0) {
             showNotice(i18n.invalid_points || 'Please enter a valid number of points.', 'error');
@@ -70,14 +70,14 @@
     // When WC removes our virtual coupon via its own [Remove] link in cart
     // totals, hide the "Coupon removed" notice and reload so the form updates.
     $(document.body).on('removed_coupon removed_coupon_in_checkout', function (e, coupon) {
-        if (coupon === 'wclr-loyalty-discount') {
+        if (coupon === 'blrw-loyalty-discount') {
             $('.woocommerce-message, .woocommerce-info, .woocommerce-error').hide();
             location.reload();
         }
     });
 
     // Remove points (button inside our redeem form).
-    $(document.body).on('click', '#wclr-remove-points', function (e) {
+    $(document.body).on('click', '#blrw-remove-points', function (e) {
         e.preventDefault();
 
         var $btn = $(this);
