@@ -1,5 +1,5 @@
 === Beltoft Loyalty Rewards for WooCommerce ===
-Contributors: christian198521, beltoft.net
+Contributors: christian198521, beltoftnet
 Tags: loyalty, points, rewards, discount, woocommerce
 Requires at least: 6.2
 Tested up to: 6.9
