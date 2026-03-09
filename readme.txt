@@ -4,7 +4,7 @@ Tags: loyalty, points, rewards, discount, woocommerce
 Requires at least: 6.2
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.2.18
+Stable tag: 1.2.19
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ Yes.
 4. Admin points ledger.
 
 == Changelog ==
+
+= 1.2.19 =
+* Improved: Shortcode asset loading — CSS is now enqueued from within the shortcode render callback instead of scanning post content.
 
 = 1.2.18 =
 * Fixed: Frontend CSS not loading on pages with shortcodes ([blrw_points_message], [blrw_redeem_form]).

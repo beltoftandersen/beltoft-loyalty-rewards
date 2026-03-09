@@ -125,6 +125,7 @@ class Plugin {
      * Shortcode [blrw_points_message] - renders the "earn X points" message.
      */
     public static function shortcode_points_message() {
+        wp_enqueue_style( 'blrw-frontend', WCLR_URL . 'assets/css/frontend.css', [], WCLR_VER );
         ob_start();
         self::product_points_message();
         return ob_get_clean();
@@ -146,16 +147,7 @@ class Plugin {
      * Frontend CSS/JS.
      */
     public static function enqueue_frontend_assets() {
-        $has_shortcode = false;
-        if ( is_singular() ) {
-            global $post;
-            $has_shortcode = $post && (
-                has_shortcode( $post->post_content, 'blrw_points_message' )
-                || has_shortcode( $post->post_content, 'blrw_redeem_form' )
-            );
-        }
-
-        if ( ! is_account_page() && ! is_cart() && ! is_checkout() && ! is_product() && ! $has_shortcode ) {
+        if ( ! is_account_page() && ! is_cart() && ! is_checkout() && ! is_product() ) {
             return;
         }
 
