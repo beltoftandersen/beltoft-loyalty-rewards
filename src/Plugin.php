@@ -102,7 +102,8 @@ class Plugin {
         $points = \LoyaltyRewards\Core\Calculator::points_for_amount( $price );
         if ( $points > 0 ) {
             printf(
-                '<p class="blrw-product-message">%s</p>',
+                '<p class="blrw-product-message" data-product-id="%d">%s</p>',
+                absint( $product->get_id() ),
                 sprintf(
                     /* translators: %s: number of points */
                     wp_kses( __( 'Purchase this product and earn %s points!', 'beltoft-loyalty-rewards' ), [ 'strong' => [] ] ),
