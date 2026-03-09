@@ -365,7 +365,7 @@ class RedeemHooks {
             return new \WP_Error( 'invalid_points', __( 'Invalid points amount.', 'beltoft-loyalty-rewards' ) );
         }
 
-        $cart_total = (float) WC()->cart->get_subtotal();
+        $cart_total = (float) WC()->cart->get_subtotal() + (float) WC()->cart->get_subtotal_tax();
         $max_points = Calculator::max_redeemable_points( $cart_total, $balance );
         $points     = min( $points, $max_points );
 
@@ -566,7 +566,7 @@ class RedeemHooks {
         if ( ! WC()->cart ) {
             return 0;
         }
-        return (float) WC()->cart->get_subtotal();
+        return (float) WC()->cart->get_subtotal() + (float) WC()->cart->get_subtotal_tax();
     }
 
     /**

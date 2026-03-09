@@ -82,7 +82,7 @@ class StoreApiExtension {
         $balance         = PointsService::get_balance( $user_id );
         $session_points  = WC()->session ? (int) WC()->session->get( 'wclr_redeem_points', 0 ) : 0;
         $discount_value  = $session_points > 0 ? Calculator::discount_for_points( $session_points ) : 0;
-        $subtotal        = WC()->cart ? (float) WC()->cart->get_subtotal() : 0;
+        $subtotal        = WC()->cart ? (float) WC()->cart->get_subtotal() + (float) WC()->cart->get_subtotal_tax() : 0;
 
         $base['balance']          = $balance;
         $base['redeeming_points'] = $session_points;

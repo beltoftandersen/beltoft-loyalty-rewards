@@ -4,7 +4,7 @@ Tags: loyalty, points, rewards, discount, woocommerce
 Requires at least: 6.2
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.2.15
+Stable tag: 1.2.16
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ Yes.
 4. Admin points ledger.
 
 == Changelog ==
+
+= 1.2.16 =
+* Fixed: Max redeemable points calculated on subtotal excluding tax, preventing full cart coverage when prices include tax.
 
 = 1.2.15 =
 * Changed: "Exclude Tax from Points Calculation" now disabled by default (new installs only).
