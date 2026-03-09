@@ -146,7 +146,16 @@ class Plugin {
      * Frontend CSS/JS.
      */
     public static function enqueue_frontend_assets() {
-        if ( ! is_account_page() && ! is_cart() && ! is_checkout() && ! is_product() ) {
+        $has_shortcode = false;
+        if ( is_singular() ) {
+            global $post;
+            $has_shortcode = $post && (
+                has_shortcode( $post->post_content, 'blrw_points_message' )
+                || has_shortcode( $post->post_content, 'blrw_redeem_form' )
+            );
+        }
+
+        if ( ! is_account_page() && ! is_cart() && ! is_checkout() && ! is_product() && ! $has_shortcode ) {
             return;
         }
 
