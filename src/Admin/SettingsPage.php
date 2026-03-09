@@ -76,8 +76,8 @@ class SettingsPage {
         }, $settings_slug );
 
         self::add_checkbox( 'redeem_enabled', __( 'Enable Redemption', 'beltoft-loyalty-rewards' ), 'wclr_redeem', $settings_slug );
-        self::add_number( 'redeem_rate_points', __( 'Points Required', 'beltoft-loyalty-rewards' ), 'wclr_redeem', '1', '1',
-            __( 'This many points equals the currency amount below.', 'beltoft-loyalty-rewards' ), $settings_slug );
+        self::add_number( 'redeem_rate_points', __( 'Redemption Rate (Points)', 'beltoft-loyalty-rewards' ), 'wclr_redeem', '1', '1',
+            __( 'Number of points that equal the currency amount below.', 'beltoft-loyalty-rewards' ), $settings_slug );
         self::add_number( 'redeem_rate_currency', sprintf(
             /* translators: %s: currency symbol (e.g. $, €, £) */
             __( 'Currency Value (%s)', 'beltoft-loyalty-rewards' ),

@@ -22,7 +22,7 @@ class Options {
             // Earning
             'earn_rate'            => '1',      // points per currency unit
             'award_on_status'      => 'completed', // completed | processing
-            'exclude_tax'          => '1',
+            'exclude_tax'          => '0',
             'exclude_shipping'     => '1',
             'rounding'             => 'floor',  // floor | ceil | round
 
