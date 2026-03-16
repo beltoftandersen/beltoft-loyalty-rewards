@@ -36,7 +36,7 @@ A points-based loyalty system for WooCommerce. Customers earn points on orders a
 
 === Pro Add-on ===
 
-Need referrals, campaigns, tiers, or bulk tools? The **[Beltoft Loyalty Rewards for WooCommerce - Pro](https://beltoft.net/dk/plugins/loyalty-rewards)** add-on adds:
+Need referrals, campaigns, tiers, or bulk tools? The **[Beltoft Loyalty Rewards for WooCommerce - Pro](https://beltoft.net/plugins/loyalty-rewards)** add-on adds:
 
 * Referral program with shareable links and anti-fraud hold
 * Bonus points for signup, reviews, and daily login
