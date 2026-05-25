@@ -2,9 +2,9 @@
 Contributors: christian198521, beltoftnet
 Tags: loyalty, points, rewards, discount, woocommerce
 Requires at least: 6.2
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.2.20
+Stable tag: 1.2.21
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ Yes.
 4. Admin points ledger.
 
 == Changelog ==
+
+= 1.2.21 =
+- Tested with WordPress 7.0.
 
 = 1.2.20 =
 * Fixed: Pro add-on link pointing to incorrect URL.
