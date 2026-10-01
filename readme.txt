@@ -2,9 +2,9 @@
 Contributors: christian198521, beltoftnet
 Tags: loyalty, points, rewards, discount, woocommerce
 Requires at least: 6.2
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.2.21
+Stable tag: 1.2.22
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,11 @@ Yes.
 4. Admin points ledger.
 
 == Changelog ==
+
+= 1.2.22 =
+* Fixed: Applying or removing points no longer reloads the page. The redeem form and cart/checkout totals now update in place (keeps multistep checkouts on the current step).
+* Improved: Pressing Enter in the points field applies the points instead of submitting the checkout.
+* Tested with WordPress 7.1.
 
 = 1.2.21 =
 - Tested with WordPress 7.0.
