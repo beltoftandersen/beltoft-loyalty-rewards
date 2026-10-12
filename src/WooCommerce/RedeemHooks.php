@@ -468,6 +468,14 @@ class RedeemHooks {
      * When the virtual coupon is removed via WC UI, clear session.
      */
     public static function on_coupon_removed( $code ) {
+        // WooCommerce Subscriptions strips non-recurring coupons from its cloned
+        // recurring carts while totalling them. That is not the customer removing
+        // the discount, and clearing the shared session here would drop the
+        // redemption from the real cart on the next request.
+        if ( class_exists( 'WC_Subscriptions_Cart' ) && 'recurring_total' === \WC_Subscriptions_Cart::get_calculation_type() ) {
+            return;
+        }
+
         if ( strtolower( $code ) === self::COUPON_CODE && WC()->session ) {
             WC()->session->set( 'wclr_redeem_points', 0 );
         }
