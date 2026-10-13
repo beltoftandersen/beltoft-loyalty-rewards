@@ -11,9 +11,6 @@ defined( 'ABSPATH' ) || exit;
 class MyAccount {
 
     public static function init() {
-        // Register endpoint.
-        add_action( 'init', [ __CLASS__, 'add_endpoint' ] );
-
         // Add menu item.
         add_filter( 'woocommerce_account_menu_items', [ __CLASS__, 'menu_item' ] );
 
@@ -22,13 +19,6 @@ class MyAccount {
 
         // Page title.
         add_filter( 'the_title', [ __CLASS__, 'endpoint_title' ], 10, 2 );
-    }
-
-    /**
-     * Register the rewrite endpoint.
-     */
-    public static function add_endpoint() {
-        add_rewrite_endpoint( 'loyalty-points', EP_ROOT | EP_PAGES );
     }
 
     /**

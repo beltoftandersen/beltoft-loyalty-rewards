@@ -152,7 +152,7 @@ msgstr "Apresentação"
 
 #: src/Admin/SettingsPage.php
 msgid "Show \"My Points\" Tab in My Account"
-msgstr "Mostrar separador \"Os Meus Pontos\" em A Minha Conta"
+msgstr "Mostrar separador \"Os meus pontos\" em A minha conta"
 
 #: src/Admin/SettingsPage.php
 msgid "To display the points message in a custom location, use the shortcode:"
@@ -373,7 +373,7 @@ msgstr "Motivo"
 
 #: src/WooCommerce/MyAccount.php
 msgid "My Points"
-msgstr "Os Meus Pontos"
+msgstr "Os meus pontos"
 
 #: src/WooCommerce/MyAccount.php
 msgid "Transaction History"
@@ -585,3 +585,7 @@ msgstr "A troca de pontos não está ativada."
 #: src/Blocks/StoreApiExtension.php
 msgid "Cart not available."
 msgstr "Carrinho indisponível."
+
+#: src/WooCommerce/AccountEndpoint.php
+msgid "Endpoint for the \"My account &rarr; My Points\" page."
+msgstr "Endpoint para a página \"A minha conta &rarr; Os meus pontos\"."

@@ -8,6 +8,7 @@ use LoyaltyRewards\Core\PointsService;
 use LoyaltyRewards\WooCommerce\EarnHooks;
 use LoyaltyRewards\WooCommerce\RedeemHooks;
 use LoyaltyRewards\WooCommerce\MyAccount;
+use LoyaltyRewards\WooCommerce\AccountEndpoint;
 use LoyaltyRewards\WooCommerce\OrderAdmin;
 use LoyaltyRewards\Admin\SettingsPage;
 use LoyaltyRewards\Admin\UserProfile;
@@ -31,6 +32,12 @@ class Plugin {
             UserProfile::init();
             LedgerListTable::init();
             OrderAdmin::init();
+        }
+
+        // My Account endpoint: registered in every context so rewrite rules
+        // rebuilt on an admin request keep it, and its slug is configurable.
+        if ( $opts['show_myaccount_tab'] === '1' ) {
+            AccountEndpoint::init();
         }
 
         // Frontend + AJAX.

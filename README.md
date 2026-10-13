@@ -2,7 +2,7 @@
 
 Points-based loyalty system for WooCommerce. Customers earn points on orders and redeem them for discounts at cart or checkout.
 
-- Stable version: 1.2.23
+- Stable version: 1.3.0
 - Requires: WordPress 6.2+, WooCommerce 7.0+, PHP 7.4+ (tested up to WordPress 7.1)
 - Author: beltoft.net
 - License: GPLv2 or later
@@ -75,6 +75,11 @@ The optional [Beltoft Loyalty Rewards for WooCommerce - Pro](https://beltoft.net
 - Text domain: `beltoft-loyalty-rewards`
 
 ## Changelog
+
+### 1.3.0
+
+- Added: the My Account endpoint URL can be changed under WooCommerce › Settings › Advanced › Account endpoints.
+- Fixed: Portuguese (pt_PT) menu label "Os meus pontos" in sentence case.
 
 ### 1.2.23
 

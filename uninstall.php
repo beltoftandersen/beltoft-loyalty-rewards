@@ -22,6 +22,7 @@ $wpdb->query( $wpdb->prepare( 'DROP TABLE IF EXISTS %i', $wpdb->prefix . 'wclr_l
 // Delete plugin options.
 delete_option( 'wclr_options' );
 delete_option( 'wclr_db_version' );
+delete_option( 'woocommerce_myaccount_loyalty_points_endpoint' );
 
 // Delete all user meta.
 // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Bulk cleanup on uninstall.

@@ -21,9 +21,9 @@ class Installer {
 
         update_option( self::DB_VERSION_KEY, self::DB_VERSION );
 
-        // Flush rewrite rules for My Account endpoint.
-        add_rewrite_endpoint( 'loyalty-points', EP_ROOT | EP_PAGES );
-        flush_rewrite_rules();
+        // Rebuild rewrite rules for the My Account endpoint on the next request,
+        // when it is registered with its configured slug.
+        \LoyaltyRewards\WooCommerce\AccountEndpoint::queue_flush();
     }
 
     /**
@@ -32,6 +32,8 @@ class Installer {
     public static function deactivate() {
         wp_clear_scheduled_hook( 'wclr_expiry_cron' );
         flush_rewrite_rules();
+        // The endpoint is still registered in this request; rebuild once more without it.
+        \LoyaltyRewards\WooCommerce\AccountEndpoint::queue_flush();
     }
 
     /**
